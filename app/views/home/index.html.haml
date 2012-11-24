@@ -14,40 +14,128 @@
     <br >
     #description{:style => "text-align:center;" }
       %h3
-        職場や、学校にお土産を買うのがおっくうな方に、代わりにお土産買って自宅に送ります
-      "とりあえず買っとく"相手に、ど定番をお届け。
-      いちいち機内に持っていかずに自宅で受け取り。
+        代わりにお土産買って自宅に送れたらいいなぁと思ったので、<br>自分でおつかい代行をしたいと思います。
+      %a{:href => "https://twitter.com/kimihito_", :target => "_blank"} 
+        @kimihito_ 
+      が沖縄のお土産のド定番を皆さんの自宅に送ることをしてみようと思います。<br>
+      
+      試験的にやるつもりで、問題があるようならすぐに停止します。 
+      
 
-    %ul{ :style => "font-size:1em; line-hegiht: 20px; margin-top:10px" }
+    %ul{ :style => "font-size:1em; line-hegiht: 20px; margin-right:auto; margin-left:auto; width:760px; margin-top: 10px" }
+      お願い
       %li
-        数の制限上購入出来なかった場合は返金致します。（返金手数料はジャパネット並みに私が負担）
+        商品代 + 送料(一律840円)になります。送料が割に合わなくて値上げするかもしれない。買えるなら、お土産屋さんの方が安いです。       
       %li
-        4月末日までにはみなさまのもとへお届け致します。
+        当日到着は難しいので、やめてください。だいたい3日とかそこらかかります。（その前に頼んでくれるとすごく助かる）
       %li
-        具体的にこれが欲しい！との指定がある場合、
+        フィードバック（こういうものが欲しい）とか不明な点がありましたら、
+        %a{:href => "https://twitter.com/kimihito_", :target => "_blank"} 
+          @kimihito_
+        の方に連絡をお願いします。
+
 
     .row
       .span4
         %h4
           紅いもタルト
         = image_tag("/images/taruto.jpeg", :align => "left",:width => "150px", :height => "150px",:margin=> "0,24px,0,0",:vspace => "15", :hspace => "20" )
-        沖縄ド定番その１。
-        見たことない人はいないぐらい沖縄の定番。
+        沖縄ド定番その1。<br>
+        見たことない人はいないぐらい沖縄の定番。<br>
+        紅いもタルト<br>
 
+        .paypal
+          %form{:action => "https://www.paypal.com/cgi-bin/webscr", :method => "post", :target => "paypal"}
+            %input{:name => "cmd", :type => "hidden", :value => "_s-xclick"}
+              %table
+                %tr
+                  %td
+                    %input{:name => "on0", :type => "hidden", :value => "箱数"} 箱数(1箱6個入り)
 
+                %tr
+                  %td
+                    %select{:name => "os0"}
+                      %option{:value => "1箱"} 1箱 ¥630 JPY
+                      %option{:value => "2箱"} 2箱 ¥1,260 JPY
+                      %option{:value => "3箱"} 3箱 ¥1,890 JPY
+                      %option{:value => "4箱"} 4箱 ¥2,520 JPY
+                      %option{:value => "5箱"} 5箱 ¥3,150 JPY
+                      %option{:value => "6箱"} 6箱 ¥3,780 JPY
+                %tr
+                  %td
+                    %input{:name => "on1", :type => "hidden", :value => "到着要望日"} 到着要望日
+                %tr
+                  %td
+                    %input{:maxlength => "20", :name => "os1", :type => "text"}/
+              %input{:name => "currency_code", :type => "hidden", :value => "JPY"}
+                %input{:name => "encrypted", :type => "hidden", :value => "-----BEGIN PKCS7-----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-----END PKCS7-----\r\n"}
+                %input{:alt => "PayPal - オンラインでより安全・簡単にお支払い", :border => "0", :name => "submit", :src => "https://www.paypalobjects.com/ja_JP/JP/i/btn/btn_cart_LG.gif", :type => "image"}
+                  %img{:alt => "", :border => "0", :height => "1", :src => "https://www.paypalobjects.com/ja_JP/i/scr/pixel.gif", :width => "1"}
       .span4
         %h4
           雪塩ちんすこう
         = image_tag("/images/tinsukou.jpg", :align => "left",:width => "150px", :height => "150px",:margin=> "0,24px,0,0",:vspace => "15", :hspace => "20" )
-        沖縄ド定番その１。見たことない人はいないぐらい沖縄の定番。
+        沖縄ド定番その2。<br>
+        これも見たことない人はいないぐらい沖縄の定番。<br>
+        ちんすこう<br>
+
+        .paypal
+          %form{:action => "https://www.paypal.com/cgi-bin/webscr", :method => "post", :target => "paypal"}
+            %input{:name => "cmd", :type => "hidden", :value => "_s-xclick"}
+              %table
+                %tr
+                  %td
+                    %input{:name => "on0", :type => "hidden", :value => "箱数(1箱48個入り)"} 箱数(1箱48個入り)
+                %tr
+                  %td
+                    %select{:name => "os0"}
+                      %option{:value => "1箱"} 1箱 ¥1,050 JPY
+                      %option{:value => "2箱"} 2箱 ¥2,100 JPY
+                      %option{:value => "3箱"} 3箱 ¥3,150 JPY
+                      %option{:value => "4箱"} 4箱 ¥4,200 JPY
+                      %option{:value => "5箱"} 5箱 ¥5,250 JPY
+                      %option{:value => "6箱"} 6箱 ¥6,300 JPY
+                %tr
+                  %td
+                    %input{:name => "on1", :type => "hidden", :value => "到着要望日"} 到着要望日
+                %tr
+                  %td
+                    %input{:maxlength => "200", :name => "os1", :type => "text"}/
+              %input{:name => "currency_code", :type => "hidden", :value => "JPY"}
+                %input{:name => "encrypted", :type => "hidden", :value => "-----BEGIN PKCS7-----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-----END PKCS7-----\r\n"}
+                %input{:alt => "PayPal - オンラインでより安全・簡単にお支払い", :border => "0", :name => "submit", :src => "https://www.paypalobjects.com/ja_JP/JP/i/btn/btn_cart_LG.gif", :type => "image"}
+                  %img{:alt => "", :border => "0", :height => "1", :src => "https://www.paypalobjects.com/ja_JP/i/scr/pixel.gif", :width => "1"}
 
       .span4
         %h4
           詰め合わせセット
-        = image_tag("/images/tinsukou.jpg", :align => "left",:width => "150px", :height => "150px",:margin=> "0,24px,0,0",:vspace => "15", :hspace => "20" )
+        = image_tag("/images/hatena.gif", :align => "left",:width => "150px", :height => "150px",:margin=> "0,24px,0,0",:vspace => "15", :hspace => "20" )
 
-        沖縄ド定番その１。
-        見たことない人はいないぐらい沖縄の定番。
+        沖縄にあるお菓子とかを詰め合わせて送ろうと思います。<br>
+        日常のスーパーにあるものを詰めます。<br>
+        たぶん、沖縄じゃなくても買えるものあるかも。<br>
+
+        .paypal
+          %form{:action => "https://www.paypal.com/cgi-bin/webscr", :method => "post", :target => "paypal"}
+            %input{:name => "cmd", :type => "hidden", :value => "_s-xclick"}
+              %table
+                %tr
+                  %td
+                    %input{:name => "on0", :type => "hidden", :value => "詰め合わせ"} 詰め合わせ
+                %tr
+                  %td
+                    %select{:name => "os0"}
+                      %option{:value => "1000円分"} 1000円分 ¥1,050 JPY
+                %tr
+                  %td
+                    %input{:name => "on1", :type => "hidden", :value => "到着要望日"} 到着要望日
+                %tr
+                  %td
+                    %input{:maxlength => "200", :name => "os1", :type => "text"}/
+              %input{:name => "currency_code", :type => "hidden", :value => "JPY"}
+                %input{:name => "encrypted", :type => "hidden", :value => "-----BEGIN PKCS7-----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-----END PKCS7-----\r\n"}
+                  %input{:alt => "PayPal - オンラインでより安全・簡単にお支払い", :border => "0", :name => "submit", :src => "https://www.paypalobjects.com/ja_JP/JP/i/btn/btn_cart_LG.gif", :type => "image"}
+                    %img{:alt => "", :border => "0", :height => "1", :src => "https://www.paypalobjects.com/ja_JP/i/scr/pixel.gif", :width => "1"} 
 
     #madeby{:style => "text-align:right" }
       hoooo
